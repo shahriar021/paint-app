@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.github.gcacace.signaturepad.views.SignaturePad
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/signature_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:penColor="@android:color/black"
+        android:background="@color/white"
+        android:layout_above="@+id/optios_holder"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/optios_holder"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            >
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:id="@+id/penSize"
+                >
+
+            </SeekBar>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="5dp"
+                android:id="@+id/txtpensize"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="end"
+            >
+           <ImageButton
+               android:layout_width="0dp"
+               android:layout_height="70dp"
+               android:id="@+id/btnsave"
+               android:background="@color/white"
+               android:scaleType="center"
+               android:layout_weight="1"
+               android:src="@drawable/ic_save"
+
+               >
+           </ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:id="@+id/btncolor"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_color"
+
+                >
+            </ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:id="@+id/btnerg"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_eraser"
+
+                >
+
+           </ImageButton>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
